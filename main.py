@@ -39,7 +39,7 @@ def main():
             label="Enter Prompt for the Image...",
             help="Enter the prompt for the Image here....",
             key="query",
-            max_chars=100)
+            max_chars=500)
         submit_button = st.form_submit_button(label="Generate")
 
     if query and submit_button:
