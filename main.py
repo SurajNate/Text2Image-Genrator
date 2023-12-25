@@ -25,7 +25,6 @@ def text2image(prompt: str):
     # You can access the image with PIL.Image for example
     image = Image.open(io.BytesIO(image_bytes))
 
-    timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
     filename = f"img.jpg"
 
     image.save(filename)
@@ -40,7 +39,7 @@ def main():
             label="Enter Prompt for the Image...",
             help="Enter the prompt for the Image here....",
             key="query",
-            max_chars=50)
+            max_chars=100)
         submit_button = st.form_submit_button(label="Generate")
 
     if query and submit_button:
